@@ -1,0 +1,6 @@
+- title: OSV-SCALIBR has NULL Pointer Dereference
+  url: "https://github.com/advisories/GHSA-f786-75f3-74xj"
+  ghsa_id: "GHSA-f786-75f3-74xj"
+  cve_id: "CVE-2025-13425"
+  credit: "Finder"
+  summary: "A bug in the filesystem traversal fallback path causes fs/diriterate/diriterate.go:Next() to overindex an empty slice when ReadDir returns nil for an empty directory, resulting in a panic (index out of range) and an application crash (denial of service) in OSV-SCALIBR."
