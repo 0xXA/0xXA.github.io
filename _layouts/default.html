@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} · {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | truncate: 160 }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-nav">
+      <a class="brand" href="{{ '/' | relative_url }}">Yuv<span class="mirror-r">r</span>aj Saxena</a>
+      <nav class="nav-links">
+        <a href="{{ '/' | relative_url }}">About</a>
+        <a href="{{ '/blog/' | relative_url }}">Blog</a>
+        <a href="{{ '/opensource/' | relative_url }}">Open Source</a>
+        <a href="{{ site.cv_url | relative_url }}">CV</a>
+        <a href="mailto:{{ site.email }}">Email</a>
+        <a href="https://github.com/{{ site.github_username }}">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}.</p>
+  </footer>
+</body>
+</html>
