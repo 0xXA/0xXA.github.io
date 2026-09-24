@@ -1,3 +1,10 @@
+- title: Improper Array Index Validation in DB Unregistered Options parsing Leads to unreleased lock and Denial of Service 
+  url: "https://github.com/advisories/GHSA-4w7g-wmg8-fgv5"
+  ghsa_id: "GHSA-4w7g-wmg8-fgv5"
+  cve_id: "CVE-2026-96273"
+  credit: "Finder"
+  summary: "National Security Agency's Ghidra before 12.1.4 fails to validate the TYPE_COL byte in OptionsDB.createUnregisteredOption(), causing an ArrayIndexOutOfBoundsException that leaves domain objects permanently locked. Attackers can craft a malicious program database file that, when imported, causes the application to stall and prevents resource cleanup or graceful shutdown."
+
 - title: OSV-SCALIBR has NULL Pointer Dereference
   url: "https://github.com/advisories/GHSA-f786-75f3-74xj"
   ghsa_id: "GHSA-f786-75f3-74xj"
